@@ -1,39 +1,38 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
+import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: '/slide1.jpg',
-    alt: 'Promoção de Verão',
-    title: 'Promoção de Verão',
-    description: 'Aproveite descontos de até 50% em produtos selecionados',
+    image: "/slide1.jpg",
+    alt: "Promoção de Verão",
+    title: "Promoção de Verão",
+    description: "Aproveite descontos de até 50% em produtos selecionados",
   },
   {
-    image: '/slide2.jpg',
-    alt: 'Novos Produtos',
-    title: 'Novos Produtos',
-    description: 'Confira as últimas novidades da nossa loja',
+    image: "/slide2.jpg",
+    alt: "Novos Produtos",
+    title: "Novos Produtos",
+    description: "Confira as últimas novidades da nossa loja",
   },
   {
-    image: '/slide3.jpg',
-    alt: 'Frete Grátis',
-    title: 'Frete Grátis',
-    description: 'Em compras acima de R$ 200,00 para todo o Brasil',
+    image: "/slide3.jpg",
+    alt: "Frete Grátis",
+    title: "Frete Grátis",
+    description: "Em compras acima de R$ 200,00 para todo o Brasil",
   },
-]
+];
 
 export function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length)
-    }, 10000)
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 10000);
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative h-[500px]">
@@ -41,7 +40,7 @@ export function HeroSection() {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+            index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
           {/* <Image
@@ -62,7 +61,7 @@ export function HeroSection() {
           <button
             key={index}
             className={`w-3 h-3 rounded-full ${
-              index === currentSlide ? 'bg-white' : 'bg-gray-400'
+              index === currentSlide ? "bg-white" : "bg-gray-400"
             }`}
             onClick={() => setCurrentSlide(index)}
             aria-label={`Ir para o slide ${index + 1}`}
@@ -70,6 +69,5 @@ export function HeroSection() {
         ))}
       </div>
     </section>
-  )
+  );
 }
-

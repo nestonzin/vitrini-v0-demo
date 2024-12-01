@@ -11,7 +11,7 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-export async function GET(request: Request) {
+export async function GET() {
   const { data: store, error } = await supabase
     .from("stores")
     .select("*")

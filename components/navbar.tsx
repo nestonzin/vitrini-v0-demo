@@ -12,13 +12,6 @@ interface NavbarProps {
   onOpenCart: () => void;
 }
 
-type Store = {
-  id: number;
-  name: string;
-  description: string;
-  user_id: string;
-};
-
 export function Navbar({ cartItemsCount, onOpenCart }: NavbarProps) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
