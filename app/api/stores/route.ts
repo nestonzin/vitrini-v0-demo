@@ -15,11 +15,11 @@ export async function GET() {
   const { data: store, error } = await supabase
     .from("stores")
     .select("*")
-    .eq("id", 1)
+    .eq("id", 2)
     .single();
 
   console.log('Query Response:', { store, error });
-  console.log('Store ID:', { id: 1 });
+  console.log('Store ID:', { id: 2 });
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });

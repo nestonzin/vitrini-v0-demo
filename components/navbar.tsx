@@ -16,6 +16,7 @@ export function Navbar({ cartItemsCount, onOpenCart }: NavbarProps) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [storeName, setStoreName] = useState<string>("");
+  const [storeLogo, setStoreLogo] = useState<string>("");
 
   useEffect(() => {
     const getStoreData = async () => {
@@ -24,6 +25,7 @@ export function Navbar({ cartItemsCount, onOpenCart }: NavbarProps) {
         const storeData = await response.json();
         console.log("Store Data:", storeData);
         setStoreName(storeData.name);
+        setStoreLogo(storeData.logo);
       } catch (error) {
         console.error("Error fetching store:", error);
       }
@@ -41,8 +43,8 @@ export function Navbar({ cartItemsCount, onOpenCart }: NavbarProps) {
     <nav className="flex items-center justify-between p-4 bg-background">
       <Link href="/" className="flex items-center space-x-2">
         <Image
-          src="/logo.png"
-          alt="Logo da Loja"
+          src={storeLogo}
+          alt={storeName}
           width={40}
           height={40}
           className="w-10 h-10"
