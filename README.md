@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vitrini Dev v1
 
-## Getting Started
+[English](#english) | [Português](#português)
 
-First, run the development server:
+# Português
+
+Uma aplicação vitrini digital que redireciona para o WhatsApp do vendedor construída com Next.js com gerenciamento de carrinho, fluxo de checkout e integração com WhatsApp.
+
+## Funcionalidades
+
+- Catálogo de produtos com exibição em cards
+- Gerenciamento de carrinho de compras
+- Busca de endereço via CEP
+- Processo de checkout com validação de formulário
+- Integração de pedidos via WhatsApp
+- Design responsivo com suporte mobile
+
+## Tecnologias Utilizadas
+
+- Next.js
+- TypeScript
+- React Hooks
+- Tailwind CSS
+- Validação de formulários
+- Integração com ViaCEP
+
+## Iniciando o Projeto
+
+1. Clone o repositório
+2. Instale as dependências:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Inicie o servidor de desenvolvimento:
+npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Execute
 
-## Learn More
+Acesse http://localhost:3000
+Como Contribuir
+Sinta-se à vontade para contribuir com este projeto enviando pull requests ou criando issues.
 
-To learn more about Next.js, take a look at the following resources:
+# English
+An e-commerce application built with Next.js featuring cart management, checkout flow and WhatsApp integration.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
+Product catalog with cards display
+Shopping cart management
+Address lookup via CEP integration
+Checkout process with form validation
+WhatsApp order integration
+Responsive design with mobile support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
+Next.js
+TypeScript
+React Hooks
+Tailwind CSS
+Form validation
+ViaCEP API integration
 
-## Deploy on Vercel
+## Project Structure
+/app - Next.js app directory and routes
+/components - Reusable UI components
+/types - TypeScript interfaces and types
+/utils - Utility functions
+/hooks - Custom React hooks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Core Components
+Product Card - Display of individual products
+Cart Sidebar - Shopping cart management
+Checkout Modal - Order finalization flow
+Custom Hooks:
+useCart - Shopping cart state management
+usePagination - Product listing pagination
+Data Models
+Products: Manages product information
+Cart Items: Extends products with quantity
+Checkout Form: Handles order and delivery information
+ViaCEP Integration: Address lookup functionality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Getting Started
+Clone the repository
+Install dependencies:
+npm install
+
+Copy
+
+Execute
+
+Run the development server:
+npm run dev
+
+Copy
+
+Execute
+
+Open http://localhost:3000
+Contributing
+Feel free to contribute to this project by submitting pull requests or creating issues.
+
+License
+MIT
